@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Basic HTML Page</title>
+    </head>
+
+    <body>
+      <h1><%= params["params"] %> Roster:</h1>
+
+      <ul>
+        <%@kickball_array.each do |team_name|
+            if team_name[:team] == params["params"]%>
+              <li><%= "#{team_name[:first]} #{team_name[:last]}: #{team_name[:position]}" %></li>
+          <%elsif team_name[:position] == params["params"]%>
+              <li><%= "#{team_name[:first]} #{team_name[:last]}: #{team_name[:team]}" %></li>
+          <%end
+          end%>
+      </ul>
+      <% if params["params"] == "Simpson Slammers" %>
+          <img src = "http://upload.wikimedia.org/wikipedia/en/0/0d/Simpsons_FamilyPicture.png"; height="200px">
+      <% elsif params["params"] == "Flinestone Fire" %>
+          <img src = "http://images6.fanpop.com/image/photos/36100000/Memorable-TV-image-memorable-tv-36194906-2225-1466.jpg"; height="200px">
+      <% elsif params["params"] == "Griffin Goats" %>
+          <img src = "http://how2becool.com/wp-content/uploads/2013/07/Family-Guy-HD-Wallpaper.jpg"; height="200px">
+      <% elsif params["params"] == "Jetson Jets" %>
+          <img src = "http://upload.wikimedia.org/wikipedia/en/a/aa/Jetsons.jpg"; height="200px">
+      <%end%>
+    </body>
+  </html>

@@ -1,0 +1,17 @@
+li {
+  font-size: large;
+  font-family: 'Sports-World-Regular';
+}
+
+@font-face {
+    font-family: 'Sports-World-Regular';
+    src: url('fonts/Sports-World-Regular.otf');
+    src: url('fonts/Sports-World-Regular.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+  font-family: 'Sports-World-Regular';
+  text-decoration: underline;
+}
